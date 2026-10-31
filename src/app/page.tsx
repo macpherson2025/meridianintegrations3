@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     absolute: "Meridian Integrations | Denver Local SEO for Service Businesses",
   },
   description:
-    "We help Denver metro service businesses dominate Google Maps and out-rank local competitors. 20 years of trusted Front Range local business heritage.",
+    "We Help Denver Metro Service Businesses Dominate Google Maps from Boulder to Castle Rock. 20 years of trusted Front Range local business heritage.",
 };
 
 const professionalService = {
