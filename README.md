@@ -1,37 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Meridian Integrations
 
-## Getting Started
+Local SEO and technical growth site for Meridian Integrations, a Denver agency. The app is Next.js 16 with the App Router and is built as a static export for Cloudflare Pages.
 
-First, run the development server:
+## Local development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Lint
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run lint
+```
 
-## Learn More
+ESLint uses `eslint-config-next` 16.4.3, the same release as the installed Next.js version.
 
-To learn more about Next.js, take a look at the following resources:
+## Production build
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run build
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+`next.config.ts` sets `output: "export"`. The build writes a static site to `out/`. Do not use `npm run start` for this project. That command expects a Node server, and this site is exported HTML, CSS, and JavaScript.
 
-## Deploy on Vercel
+## Cloudflare Pages
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Use the existing GitHub connection. Suggested settings:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# meridianintegrations3
+| Setting | Value |
+| --- | --- |
+| Build command | `npm run build` |
+| Build output directory | `out` |
+| Node.js | 20 or newer |
+
+Leave `output: "export"` in place. The city and industry routes are pre-rendered from `generateStaticParams`, so they are included in `out/` without a server.
+
+## Routes
+
+| Path | Source |
+| --- | --- |
+| `/` | `src/app/page.tsx` |
+| `/local-seo/[slug]` | `src/data/denverMetro.ts` |
+| `/seo/[slug]` | `src/data/industries.ts` |

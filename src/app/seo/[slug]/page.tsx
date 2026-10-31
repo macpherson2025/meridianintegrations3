@@ -55,12 +55,12 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
           <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-300">
             {industry.summary}
           </p>
-          <a
+          <Link
             href="/#audit"
             className="mt-8 inline-flex bg-brandRed px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-brandRedHover"
           >
             Get Free Video Audit
-          </a>
+          </Link>
         </div>
       </header>
 

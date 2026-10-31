@@ -57,12 +57,12 @@ export function Footer() {
           <p className="mt-4 text-sm leading-6 text-zinc-300">
             Proudly engineered in Denver, CO.
           </p>
-          <a
+          <Link
             href="/#audit"
             className="mt-4 inline-flex text-sm font-bold text-white underline decoration-brandRed decoration-2 underline-offset-4"
           >
             Get Free Video Audit
-          </a>
+          </Link>
           <p className="mt-6 text-xs text-zinc-500">
             © {year} Meridian Integrations. All rights reserved.
           </p>

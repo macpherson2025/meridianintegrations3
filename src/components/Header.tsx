@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { Logo } from "@/components/Logo";
 
@@ -27,12 +28,12 @@ export function Header() {
               {item.label}
             </a>
           ))}
-          <a
+          <Link
             href="/#audit"
             className="inline-flex items-center justify-center bg-brandRed px-4 py-2.5 text-sm font-bold text-white transition-colors hover:bg-brandRedHover"
           >
             Get Free Video Audit
-          </a>
+          </Link>
         </nav>
         <button
           type="button"
@@ -65,13 +66,13 @@ export function Header() {
                 {item.label}
               </a>
             ))}
-            <a
+            <Link
               href="/#audit"
               className="mt-2 inline-flex items-center justify-center bg-brandRed px-4 py-3 text-sm font-bold text-white"
               onClick={() => setOpen(false)}
             >
               Get Free Video Audit
-            </a>
+            </Link>
           </nav>
         </div>
       ) : null}
