@@ -13,9 +13,6 @@ import { useHomeNavigation } from "@/components/site/useHomeNavigation";
 const navItems = [
   { href: fullSiteHomePath, label: "Home" },
   { href: `${fullSiteHomePath}#work`, label: "Work" },
-  { href: `${fullSiteHomePath}#services`, label: "What We Do" },
-  { href: `${fullSiteHomePath}#who-we-are`, label: "Who We Are" },
-  { href: `${fullSiteHomePath}#how-we-work`, label: "How We Work" },
 ].filter((item) => showPortfolio || item.href !== `${fullSiteHomePath}#work`);
 
 const navLinkClass =
