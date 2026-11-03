@@ -49,7 +49,6 @@ export function SiteHeader() {
               {item.label}
             </Link>
           ))}
-          <ConsultationLink className={navLinkClass} label="Contact" />
           <ConsultationLink className={ctaClass} />
         </nav>
         <button
