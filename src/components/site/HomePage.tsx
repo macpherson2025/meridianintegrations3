@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ConsultationLink } from "@/components/site/ConsultationLink";
 import { ReviewFrame } from "@/components/site/ReviewFrame";
+import { HomeHashSync, HomeSectionLink } from "@/components/site/HomeSectionLink";
 import {
   contactEmail,
   fullSiteHomePath,
@@ -33,6 +34,7 @@ function includeKey(item: ServiceInclude) {
 export function HomePage() {
   return (
     <ReviewFrame>
+      <HomeHashSync />
       <main id="content">
         <section className="relative overflow-hidden border-b border-white/10">
           <div
@@ -65,9 +67,9 @@ export function HomePage() {
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <ConsultationLink className={buttonClass} />
-              <Link href={`${fullSiteHomePath}#services`} className={quietButtonClass}>
+              <HomeSectionLink href={`${fullSiteHomePath}#services`} className={quietButtonClass}>
                 Explore Our Services
-              </Link>
+              </HomeSectionLink>
             </div>
             <div className="mt-14 grid gap-4 border border-white/10 bg-brandCard/80 sm:grid-cols-3">
               {heroPoints.map((point, index) => (
@@ -99,7 +101,7 @@ export function HomePage() {
             </p>
             <div className="mt-10 grid items-stretch gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {services.map((service) => (
-                <Link
+                <HomeSectionLink
                   key={service.id}
                   href={`${fullSiteHomePath}#${service.id}`}
                   className="group flex h-full min-h-44 flex-col border border-white/10 bg-brandCard p-6 transition-colors hover:border-brandRed focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
@@ -111,7 +113,7 @@ export function HomePage() {
                     {service.cardTitle}
                   </h3>
                   <p className="mt-3 text-sm leading-6 text-zinc-300">{service.summary}</p>
-                </Link>
+                </HomeSectionLink>
               ))}
             </div>
           </div>
@@ -280,12 +282,12 @@ export function HomePage() {
                 solutions around the way your business operates.
               </p>
             </div>
-            <Link
+            <HomeSectionLink
               href={`${fullSiteHomePath}#automation`}
               className={quietButtonClass}
             >
               Explore AI & Automation
-            </Link>
+            </HomeSectionLink>
           </div>
         </section>
 

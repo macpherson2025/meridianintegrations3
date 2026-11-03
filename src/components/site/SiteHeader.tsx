@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import { Logo } from "@/components/Logo";
 import {
   fullSiteHomePath,
@@ -26,7 +25,7 @@ const ctaClass =
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
-  const handleHomeClick = useHomeNavigation(() => setOpen(false));
+  const handleSectionClick = useHomeNavigation(() => setOpen(false));
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-brandDark/80 shadow-[0_8px_30px_rgba(0,0,0,0.35)] backdrop-blur-xl">
@@ -36,18 +35,18 @@ export function SiteHeader() {
           href={fullSiteHomePath}
           label="Meridian Integrations"
           className="min-h-11"
-          onClick={handleHomeClick}
+          onClick={handleSectionClick}
         />
         <nav className="hidden items-center gap-5 lg:flex xl:gap-6" aria-label="Primary">
           {navItems.map((item) => (
-            <Link
+            <a
               key={item.href}
               href={item.href}
               className={navLinkClass}
-              onClick={item.href === fullSiteHomePath ? handleHomeClick : undefined}
+              onClick={handleSectionClick}
             >
               {item.label}
-            </Link>
+            </a>
           ))}
           <ConsultationLink className={ctaClass} />
         </nav>
@@ -73,18 +72,14 @@ export function SiteHeader() {
         >
           <nav className="flex flex-col" aria-label="Mobile">
             {navItems.map((item) => (
-              <Link
+              <a
                 key={item.href}
                 href={item.href}
                 className="inline-flex min-h-11 items-center text-sm font-medium text-zinc-200"
-                onClick={
-                  item.href === fullSiteHomePath
-                    ? handleHomeClick
-                    : () => setOpen(false)
-                }
+                onClick={handleSectionClick}
               >
                 {item.label}
-              </Link>
+              </a>
             ))}
             <ConsultationLink
               className="inline-flex min-h-11 items-center text-sm font-medium text-zinc-200"

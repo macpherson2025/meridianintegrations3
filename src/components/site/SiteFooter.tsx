@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { Logo } from "@/components/Logo";
 import {
   contactEmail,
@@ -32,12 +31,13 @@ export function SiteFooter() {
           <ul className="mt-4 space-y-2">
             {services.map((service) => (
               <li key={service.id}>
-                <Link
+                <a
                   href={`${fullSiteHomePath}#${service.id}`}
                   className="inline-flex min-h-11 items-center text-sm text-zinc-300 transition-colors hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white sm:min-h-0 sm:py-1"
+                  onClick={handleHomeClick}
                 >
                   {service.cardTitle}
-                </Link>
+                </a>
               </li>
             ))}
           </ul>
