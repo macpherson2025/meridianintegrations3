@@ -10,9 +10,11 @@ const desktopPanelQuery = "(min-width: 1024px)";
 export function ConsultationLink({
   className,
   onNavigate,
+  label = consultationLabel,
 }: {
   className: string;
   onNavigate?: () => void;
+  label?: string;
 }) {
   const panel = useContactPanel();
 
@@ -26,7 +28,7 @@ export function ConsultationLink({
 
   return (
     <a href={consultationHref} className={className} onClick={onClick}>
-      {consultationLabel}
+      {label}
     </a>
   );
 }

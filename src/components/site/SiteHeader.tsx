@@ -16,7 +16,6 @@ const navItems = [
   { href: `${fullSiteHomePath}#why`, label: "Why Meridian" },
   { href: `${fullSiteHomePath}#how-we-work`, label: "How We Work" },
   { href: `${fullSiteHomePath}#work`, label: "Work" },
-  { href: `${fullSiteHomePath}#contact`, label: "Contact" },
 ].filter((item) => showPortfolio || item.href !== `${fullSiteHomePath}#work`);
 
 const navLinkClass =
@@ -50,6 +49,7 @@ export function SiteHeader() {
               {item.label}
             </Link>
           ))}
+          <ConsultationLink className={navLinkClass} label="Contact" />
           <ConsultationLink className={ctaClass} />
         </nav>
         <button
@@ -87,6 +87,11 @@ export function SiteHeader() {
                 {item.label}
               </Link>
             ))}
+            <ConsultationLink
+              className="inline-flex min-h-11 items-center text-sm font-medium text-zinc-200"
+              label="Contact"
+              onNavigate={() => setOpen(false)}
+            />
             <ConsultationLink className={`${ctaClass} mt-2`} onNavigate={() => setOpen(false)} />
           </nav>
         </div>
