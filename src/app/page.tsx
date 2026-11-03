@@ -1,187 +1,65 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { CaseStudy } from "@/components/CaseStudy";
-import { denverMetro } from "@/data/denverMetro";
-import { industries } from "@/data/industries";
+import { AssemblyBlueprint, AssemblyField } from "@/components/coming-soon/AssemblyVisual";
+import { LaunchFooter } from "@/components/coming-soon/LaunchFooter";
+import { LaunchHeader } from "@/components/coming-soon/LaunchHeader";
+
+const description =
+  "Meridian Integrations is building a new digital experience. Web development, local SEO, and technical solutions for Colorado businesses.";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Meridian Integrations | Denver Local SEO for Service Businesses",
+    absolute: "Meridian Integrations | Coming Soon",
   },
-  description:
-    "We Help Denver Metro Service Businesses Dominate Google Maps from Boulder to Castle Rock. 20 years of trusted Front Range local business heritage.",
+  description,
+  openGraph: {
+    title: "Meridian Integrations | Coming Soon",
+    description,
+  },
 };
 
-const professionalService = {
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  name: "Meridian Integrations",
-  description:
-    "Local SEO and technical growth for Front Range service businesses and commercial property managers.",
-  areaServed: [
-    "Denver",
-    ...denverMetro.map((location) => location.cityName),
-  ],
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Denver",
-    addressRegion: "CO",
-    addressCountry: "US",
-  },
-  knowsAbout: ["Local SEO", "Google Business Profile", "Technical SEO", "Map pack"],
-};
-
-export default function Home() {
+export default function ComingSoonPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(professionalService) }}
-      />
-      <section aria-label="Website under construction" className="border-b border-brandRed/40 bg-brandCard px-5 py-8 text-center sm:px-8 sm:py-10">
-        <p className="text-xs font-bold uppercase tracking-[0.28em] text-brandRed">
-          Website Under Construction
-        </p>
-        <h2 className="mt-3 text-2xl font-bold tracking-tight text-white sm:text-3xl">
-          We&apos;re building something better.
-        </h2>
-        <p className="mx-auto mt-3 max-w-xl text-sm leading-6 text-zinc-300 sm:text-base">
-          Our new website is coming soon. In the meantime, Meridian Integrations is available for inquiries.
-        </p>
-        <a href="mailto:info@meridianintegrations.com" className="mt-5 inline-flex items-center justify-center border border-brandRed px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brandRed">
-          Contact Us
-        </a>
-      </section>
-      <section className="relative overflow-hidden border-b border-white/10">
-        <div
-          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(220,38,38,0.22),transparent_58%)]"
-          aria-hidden="true"
-        />
-        <div className="relative mx-auto w-full max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
-          <p className="text-xs font-semibold tracking-[0.28em] text-brandRed">
-            DENVER, COLORADO
+      <LaunchHeader />
+      <main id="content" className="relative flex flex-1 flex-col overflow-x-clip">
+        <AssemblyField />
+        <section className="relative z-10 mx-auto flex min-h-[calc(100svh-4.5rem)] w-full max-w-4xl flex-1 flex-col items-center justify-center px-5 py-16 text-center sm:px-8 sm:py-20">
+          <p className="max-w-xs text-balance text-[11px] font-semibold tracking-[0.22em] text-brandRed sm:max-w-none sm:text-xs sm:tracking-[0.28em]">
+            DENVER, COLORADO · IN DEVELOPMENT
           </p>
-          <h1 className="mt-5 max-w-4xl text-4xl font-bold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-6xl">
-            We Help Denver Metro Service Businesses Dominate Google Maps &
-            Out-Rank Local Competitors
+          <h1 className="mt-5 max-w-4xl text-balance text-[1.65rem] font-bold leading-[1.08] tracking-tight text-white min-[420px]:text-4xl sm:text-5xl lg:text-6xl xl:text-7xl">
+            Something Exceptional Is Taking Shape<span className="text-brandRed">.</span>
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-300">
-            20 years of trusted Front Range local business heritage, engineered
-            into map-pack rank, technical SEO, and the calls that follow.
+          <p className="mt-6 max-w-2xl text-pretty text-base leading-7 text-zinc-300 sm:text-lg sm:leading-8">
+            We&apos;re building a new digital experience for Meridian Integrations.
+            Engineered for performance, designed with purpose, and built to help
+            businesses grow.
           </p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <a
-              href="#audit"
-              className="inline-flex items-center justify-center bg-brandRed px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-brandRedHover"
-            >
-              Get Free Video Audit
-            </a>
-            <a
-              href="#case-study"
-              className="inline-flex items-center justify-center border border-white/15 px-5 py-3 text-sm font-semibold text-white transition-colors hover:border-brandRed"
-            >
-              See the locksmith results
-            </a>
-          </div>
-          <dl className="mt-14 grid gap-4 border border-white/10 bg-brandCard/80 sm:grid-cols-3">
-            <div className="px-5 py-4">
-              <dt className="text-xs tracking-[0.18em] text-zinc-500">HERITAGE</dt>
-              <dd className="mt-1 text-lg font-bold text-white">20 years on the Front Range</dd>
-            </div>
-            <div className="px-5 py-4 sm:border-l sm:border-white/10">
-              <dt className="text-xs tracking-[0.18em] text-zinc-500">FOCUS</dt>
-              <dd className="mt-1 text-lg font-bold text-white">Maps, calls, high-ticket jobs</dd>
-            </div>
-            <div className="px-5 py-4 sm:border-l sm:border-white/10">
-              <dt className="text-xs tracking-[0.18em] text-zinc-500">BASE</dt>
-              <dd className="mt-1 text-lg font-bold text-white">Engineered in Denver, CO</dd>
-            </div>
-          </dl>
-        </div>
-      </section>
-
-      <CaseStudy />
-
-      <section id="services" className="scroll-mt-24 border-t border-white/10">
-        <div className="mx-auto w-full max-w-6xl px-5 py-20 sm:px-8">
-          <p className="text-xs font-semibold tracking-[0.28em] text-brandRed">
-            SERVICES
-          </p>
-          <h2 className="mt-4 max-w-2xl text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Technical SEO blueprints for the trades that live on the phone
-          </h2>
-          <div className="mt-10 grid gap-4 md:grid-cols-2">
-            {industries.map((industry) => (
-              <Link
-                key={industry.slug}
-                href={`/seo/${industry.slug}`}
-                className="group border border-white/10 bg-brandCard p-6 transition-colors hover:border-brandRed"
-              >
-                <h3 className="text-xl font-bold text-white group-hover:text-brandRed">
-                  {industry.name}
-                </h3>
-                <p className="mt-3 text-sm leading-6 text-zinc-300">{industry.summary}</p>
-                <p className="mt-4 text-xs font-semibold tracking-[0.16em] text-zinc-500">
-                  {industry.keywordTargets[0]}
-                </p>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="markets" className="scroll-mt-24 border-t border-white/10">
-        <div className="mx-auto w-full max-w-6xl px-5 py-20 sm:px-8">
-          <p className="text-xs font-semibold tracking-[0.28em] text-brandRed">
-            MARKETS
-          </p>
-          <h2 className="mt-4 max-w-2xl text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Denver metro pages built around how each city actually searches
-          </h2>
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {denverMetro.map((location) => (
-              <Link
-                key={location.slug}
-                href={`/local-seo/${location.slug}`}
-                className="border border-white/10 bg-brandCard p-6 transition-colors hover:border-brandRed"
-              >
-                <p className="text-xs font-semibold tracking-[0.18em] text-brandRed">
-                  {location.county.toUpperCase()}
-                </p>
-                <h3 className="mt-2 text-xl font-bold text-white">{location.cityName}</h3>
-                <p className="mt-3 line-clamp-3 text-sm leading-6 text-zinc-300">
-                  {location.neighborhoodHook}
-                </p>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="audit" className="scroll-mt-24 border-t border-white/10">
-        <div className="mx-auto w-full max-w-6xl px-5 py-20 sm:px-8">
-          <div className="border border-white/10 bg-brandCard px-6 py-10 sm:px-10">
-            <p className="text-xs font-semibold tracking-[0.28em] text-brandRed">
-              FREE VIDEO AUDIT
-            </p>
-            <h2 className="mt-4 max-w-2xl text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              A short recording of your map pack, your competitors, and the technical leaks costing calls
-            </h2>
-            <p className="mt-4 max-w-2xl text-sm leading-6 text-zinc-300">
-              Built for Front Range roofers, HVAC and plumbing companies, and
-              commercial property managers. We walk the Google Business Profile,
-              the queries you should own, and the pages that fail to convert the
-              click.
+          <div className="mt-9 flex w-full flex-col items-center gap-4 sm:mt-10 sm:w-auto sm:flex-row sm:justify-center sm:gap-5">
+            <p className="inline-flex min-h-11 items-center gap-3 border border-white/15 bg-white/[0.03] px-4 text-[11px] font-semibold tracking-[0.24em] text-zinc-100 sm:tracking-[0.28em]">
+              <span className="relative flex h-2 w-2 shrink-0" aria-hidden="true">
+                <span className="status-glow absolute inset-0 bg-brandRed" />
+                <span className="relative h-2 w-2 bg-brandRed" />
+              </span>
+              COMING SOON
             </p>
             <a
-              href="mailto:audit@meridianintegrations.com?subject=Free%20Video%20Audit%20Request"
-              className="mt-8 inline-flex items-center justify-center bg-brandRed px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-brandRedHover"
+              href="mailto:info@meridianintegrations.com"
+              className="inline-flex min-h-11 w-full max-w-xs items-center justify-center bg-brandRed px-6 text-sm font-bold tracking-[0.14em] text-white transition-colors hover:bg-brandRedHover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:w-auto sm:min-w-44"
             >
-              Request the audit
+              GET IN TOUCH
             </a>
           </div>
+          <p className="mt-6 text-sm tracking-wide text-zinc-400">
+            Local expertise. Technical precision. Built in Colorado.
+          </p>
+        </section>
+        <div className="relative z-10 mx-auto w-full max-w-3xl px-5 pb-16 sm:px-8 sm:pb-24">
+          <div className="mx-auto mb-8 h-px w-12 bg-brandRed sm:mb-10" aria-hidden="true" />
+          <AssemblyBlueprint />
         </div>
-      </section>
+      </main>
+      <LaunchFooter />
     </>
   );
 }
