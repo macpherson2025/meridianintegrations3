@@ -1,4 +1,4 @@
-export const fullSiteHomePath = "/home";
+export const fullSiteHomePath = "/";
 
 export const consultationLabel = "Request a Free Consultation";
 
