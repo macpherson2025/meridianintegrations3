@@ -42,7 +42,7 @@ export function HomePage() {
             className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(220,38,38,0.16),transparent_52%)]"
             aria-hidden="true"
           />
-          <div className="relative mx-auto flex w-full max-w-6xl flex-col px-5 py-16 sm:px-8 sm:py-20 lg:min-h-[calc(100svh-12rem)] lg:justify-end lg:pb-2 lg:pt-16">
+          <div className="relative mx-auto flex w-full max-w-6xl flex-col px-5 py-16 sm:px-8 sm:py-20 lg:min-h-[calc(100svh-12rem)] lg:justify-end lg:pb-[98px] lg:pt-16">
             <h1 className="max-w-4xl text-3xl font-bold leading-[1.2] tracking-tight text-white sm:text-4xl sm:leading-[1.15] lg:text-5xl">
               <span className="sr-only">{heroHeadline}</span>
               <span aria-hidden="true">

@@ -12,7 +12,7 @@ import { useHomeNavigation } from "@/components/site/useHomeNavigation";
 
 const navItems = [
   { href: fullSiteHomePath, label: "Home" },
-  { href: `${fullSiteHomePath}#work`, label: "Work" },
+  { href: `${fullSiteHomePath}#work`, label: "Gallery" },
 ].filter((item) => showPortfolio || item.href !== `${fullSiteHomePath}#work`);
 
 const navLinkClass =
