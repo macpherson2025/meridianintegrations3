@@ -38,6 +38,20 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(professionalService) }}
       />
+      <section aria-label="Website under construction" className="border-b border-brandRed/40 bg-brandCard px-5 py-8 text-center sm:px-8 sm:py-10">
+        <p className="text-xs font-bold uppercase tracking-[0.28em] text-brandRed">
+          Website Under Construction
+        </p>
+        <h2 className="mt-3 text-2xl font-bold tracking-tight text-white sm:text-3xl">
+          We&apos;re building something better.
+        </h2>
+        <p className="mx-auto mt-3 max-w-xl text-sm leading-6 text-zinc-300 sm:text-base">
+          Our new website is coming soon. In the meantime, Meridian Integrations is available for inquiries.
+        </p>
+        <a href="mailto:info@meridianintegrations.com" className="mt-5 inline-flex items-center justify-center border border-brandRed px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brandRed">
+          Contact Us
+        </a>
+      </section>
       <section className="relative overflow-hidden border-b border-white/10">
         <div
           className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(220,38,38,0.22),transparent_58%)]"
