@@ -28,7 +28,7 @@ export function CaseStudy() {
   return (
     <section id="case-study" className="scroll-mt-24 border-t border-white/10">
       <div className="mx-auto w-full max-w-6xl px-5 py-20 sm:px-8">
-        <p className="text-xs font-semibold tracking-[0.28em] text-brandRed">
+        <p className="text-xs font-semibold tracking-[0.28em] text-brandRedInk">
           CASE STUDY
         </p>
         <div className="mt-4 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
@@ -40,7 +40,7 @@ export function CaseStudy() {
             number that pays the trucks: the phone.
           </p>
         </div>
-        <p className="mt-8 font-bold tracking-tight text-brandRed">
+        <p className="mt-8 font-bold tracking-tight text-brandRedInk">
           <span className="text-5xl sm:text-6xl">{locksmithCaseStudy.metric}</span>
           <span className="ml-3 text-base font-semibold text-zinc-200">
             {locksmithCaseStudy.metricLabel}
@@ -52,7 +52,7 @@ export function CaseStudy() {
               key={column.key}
               className="flex flex-col border border-white/10 bg-brandCard p-6"
             >
-              <p className="text-xs font-semibold tracking-[0.22em] text-brandRed">
+              <p className="text-xs font-semibold tracking-[0.22em] text-brandRedInk">
                 0{index + 1} / {column.label.toUpperCase()}
               </p>
               <h3 className="mt-4 text-xl font-bold text-white">{column.title}</h3>

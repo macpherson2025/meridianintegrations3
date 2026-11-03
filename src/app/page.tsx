@@ -4,7 +4,7 @@ import { LaunchFooter } from "@/components/coming-soon/LaunchFooter";
 import { LaunchHeader } from "@/components/coming-soon/LaunchHeader";
 
 const description =
-  "Meridian Integrations is building a new digital experience. Web development, local SEO, and technical solutions for Colorado businesses.";
+  "We're building a new digital experience for Meridian Integrations. Engineered for performance, designed with purpose, and built to help businesses grow.";
 
 export const metadata: Metadata = {
   title: {
@@ -14,6 +14,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Meridian Integrations | Coming Soon",
     description,
+    url: "/",
+    siteName: "Meridian Integrations",
   },
 };
 
@@ -24,11 +26,14 @@ export default function ComingSoonPage() {
       <main id="content" className="relative flex flex-1 flex-col overflow-x-clip">
         <AssemblyField />
         <section className="relative z-10 mx-auto flex min-h-[calc(100svh-4.5rem)] w-full max-w-4xl flex-1 flex-col items-center justify-center px-5 py-16 text-center sm:px-8 sm:py-20">
-          <p className="max-w-xs text-balance text-[11px] font-semibold tracking-[0.22em] text-brandRed sm:max-w-none sm:text-xs sm:tracking-[0.28em]">
+          <p className="max-w-xs text-balance text-[11px] font-semibold tracking-[0.22em] text-brandRedInk sm:max-w-none sm:text-xs sm:tracking-[0.28em]">
             DENVER, COLORADO · IN DEVELOPMENT
           </p>
           <h1 className="mt-5 max-w-4xl text-balance text-[1.65rem] font-bold leading-[1.08] tracking-tight text-white min-[420px]:text-4xl sm:text-5xl lg:text-6xl xl:text-7xl">
-            Something Exceptional Is Taking Shape<span className="text-brandRed">.</span>
+            <span className="sr-only">Something Exceptional Is Taking Shape.</span>
+            <span aria-hidden="true">
+              Something Exceptional Is Taking Shape<span className="text-brandRedInk">.</span>
+            </span>
           </h1>
           <p className="mt-6 max-w-2xl text-pretty text-base leading-7 text-zinc-300 sm:text-lg sm:leading-8">
             We&apos;re building a new digital experience for Meridian Integrations.

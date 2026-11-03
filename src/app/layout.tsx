@@ -12,17 +12,24 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const description =
+  "We design high-performance websites, help businesses get found on Google and AI-powered search, and build marketing and automation solutions that generate leads and support growth.";
+
 export const metadata: Metadata = {
+  metadataBase: new URL("https://meridianintegrations.com"),
   title: {
-    default: "Meridian Integrations | Denver Local SEO & Technical Growth",
+    default: "Meridian Integrations | Websites, Search, and Marketing",
     template: "%s | Meridian Integrations",
   },
-  description:
-    "Denver local SEO and technical growth for Front Range roofers, HVAC and plumbing companies, and commercial property managers. Map pack dominance, engineered in Denver.",
+  description,
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "Meridian Integrations | Denver Local SEO & Technical Growth",
-    description:
-      "We help Denver metro service businesses dominate Google Maps and out-rank local competitors.",
+    title: "Meridian Integrations | Websites, Search, and Marketing",
+    description,
+    url: "/",
+    siteName: "Meridian Integrations",
     locale: "en_US",
     type: "website",
   },

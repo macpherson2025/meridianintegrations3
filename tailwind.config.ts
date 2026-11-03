@@ -8,6 +8,7 @@ const config: Config = {
         brandCard: "#141414",
         brandRed: "#dc2626",
         brandRedHover: "#b91c1c",
+        brandRedInk: "#f03028",
       },
     },
   },

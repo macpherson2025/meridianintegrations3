@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test:contact": "node --experimental-strip-types --test cloudflare/contact-handler.test.ts"
   },
   "dependencies": {
     "next": "16.4.3",
