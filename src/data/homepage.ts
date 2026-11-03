@@ -25,10 +25,13 @@ export const heroLocation =
 export type PortfolioProject = {
   id: string;
   name: string;
+  category: string;
   description: string;
-  href?: string;
-  image?: string;
-  imageAlt?: string;
+  href: string;
+  image: string;
+  imageAlt: string;
+  mobileImage?: string;
+  mobileImageAlt?: string;
 };
 
 /**
@@ -36,6 +39,18 @@ export type PortfolioProject = {
  * and an authorized screenshot are all confirmed. Draft records live in
  * portfolio-drafts.ts and are not imported by the site.
  */
-export const publishedProjects: PortfolioProject[] = [];
+export const publishedProjects: PortfolioProject[] = [
+  {
+    id: "mobile-stress-recovery",
+    name: "Mobile Stress Recovery",
+    category: "Website Design & Development",
+    description: "Custom website design and development for an on-site stress recovery practice.",
+    href: "https://www.mobilestressrecovery.com",
+    image: "/work/mobile-stress-recovery-desktop.webp",
+    imageAlt: "Desktop view of the Mobile Stress Recovery homepage.",
+    mobileImage: "/work/mobile-stress-recovery-mobile.webp",
+    mobileImageAlt: "Mobile view of the Mobile Stress Recovery homepage.",
+  },
+];
 
 export const showPortfolio = publishedProjects.length > 0;

@@ -21,9 +21,9 @@ export const portfolioDrafts: PortfolioDraft[] = [
     id: "mobile-stress-recovery",
     name: "Mobile Stress Recovery",
     site: "https://mobilestressrecovery.com",
-    permission: "pending",
-    workStatus: "unverified",
-    note: "Client permission is pending. Do not publish the name, address, description, or any screenshot.",
+    permission: "approved",
+    workStatus: "completed",
+    note: "Lee approved featuring the live website. Published from screenshots of https://www.mobilestressrecovery.com.",
   },
   {
     id: "mile-high-metro-electrician",
