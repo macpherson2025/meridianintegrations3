@@ -2,6 +2,8 @@ export const fullSiteHomePath = "/home";
 
 export const consultationLabel = "Request a Free Consultation";
 
+export const conversationLabel = "Start a Conversation";
+
 export const contactPagePath = "/contact";
 
 export const consultationHref = contactPagePath;
@@ -14,31 +16,18 @@ export const contactEmail = "info@meridianintegrations.com";
 export const heroEyebrow = "COLORADO-BASED · SERVING BUSINESSES NATIONWIDE";
 
 export const heroHeadline = [
-  "Better Websites.",
+  "Next-Gen Web Design.",
+  "AI Search Optimization.",
   "Smarter Marketing.",
-  "Stronger Businesses.",
 ] as const;
 
 export const heroParagraph =
-  "We design high-performance websites, help businesses get found on Google and AI-powered search, and build marketing and automation solutions that generate leads and support growth.";
+  "Helping businesses get found, attract customers, and grow in an AI-driven world.";
+
+export const heroPresence = "Colorado-based. Working nationwide.";
 
 export const heroLocation =
   "Based in Colorado. Working with businesses nationwide.";
-
-export const heroPoints = [
-  {
-    title: "Built for Performance",
-    body: "Fast, mobile-friendly websites designed to make a great first impression.",
-  },
-  {
-    title: "Search & AI Visibility",
-    body: "Help customers discover your business through Google and emerging AI-powered search.",
-  },
-  {
-    title: "Marketing That Converts",
-    body: "Connect your website, advertising, and digital marketing around real business goals.",
-  },
-] as const;
 
 export type ServiceInclude =
   | string
@@ -52,6 +41,7 @@ export type Service = {
   index: string;
   cardTitle: string;
   title: string;
+  short: string;
   summary: string;
   body: string[];
   includesHeading: string;
@@ -64,6 +54,7 @@ export const services: Service[] = [
     index: "01",
     cardTitle: "Website Design & Development",
     title: "Website Design & Development",
+    short: "Clear, fast websites people can trust.",
     summary:
       "Custom, fast-loading websites designed to impress visitors, build trust, and turn more clicks into customers.",
     body: [
@@ -84,6 +75,7 @@ export const services: Service[] = [
     index: "02",
     cardTitle: "SEO & AI Search Visibility",
     title: "SEO & AI Search Visibility",
+    short: "Help customers find you through search.",
     summary:
       "Help customers discover your business through Google, Bing, and emerging AI-powered search tools like ChatGPT and Perplexity.",
     body: [
@@ -105,6 +97,7 @@ export const services: Service[] = [
     index: "03",
     cardTitle: "Google Ads & Paid Advertising",
     title: "Google Ads & Paid Advertising",
+    short: "Reach people already looking for what you offer.",
     summary:
       "Reach customers actively searching for your services with targeted campaigns, effective landing pages, and measurable results.",
     body: [
@@ -125,6 +118,7 @@ export const services: Service[] = [
     index: "04",
     cardTitle: "Social Media Marketing",
     title: "Social Media Marketing",
+    short: "A steady presence where your customers spend time.",
     summary:
       "Build a stronger online presence with engaging content, consistent branding, and campaigns tailored to your audience.",
     body: [
@@ -145,6 +139,7 @@ export const services: Service[] = [
     index: "05",
     cardTitle: "Business Automation & AI",
     title: "Business Automation & AI Solutions",
+    short: "Practical tools that take repetitive work off your plate.",
     summary:
       "Reduce repetitive work, improve customer response times, and capture more opportunities with smart automation and practical AI solutions.",
     body: [
@@ -180,82 +175,45 @@ export const services: Service[] = [
   },
 ];
 
-export const whyIntro = [
-  "With over 20 years of information technology experience behind Meridian Integrations, we bring technical knowledge and practical problem-solving to every project.",
+export const whoWeAre = [
+  "Meridian Integrations is a small Colorado studio. We build websites, help people find them, and connect the marketing around them.",
+  "You talk with us directly. The work stays practical, and you can see what you're getting.",
 ] as const;
 
-export const principles = [
-  {
-    title: "20+ Years of Technical Experience",
-    body: "From enterprise IT systems to modern web technologies, we understand the infrastructure, security, and integrations that keep businesses running.",
-  },
-  {
-    title: "Clear Communication & Honest Pricing",
-    body: "You'll know what we're building, why we're recommending it, and what it costs. No unnecessary complexity or confusing technical jargon.",
-  },
-  {
-    title: "One Connected Digital Strategy",
-    body: "Your website, SEO, advertising, social media, and automation should work together to support your business goals—not operate as disconnected services.",
-  },
-] as const;
-
-export const processIntro =
-  "Every business is different. We take the time to understand your goals, develop a practical strategy, and build solutions designed around your needs. You'll know what to expect at every stage.";
+export const processIntro = "A straightforward path from the first conversation to a live site.";
 
 export const processSteps = [
   {
     index: "01",
-    title: "Discovery",
-    body: "We start by learning about your business, your customers, and what you want to accomplish. We'll discuss your challenges, opportunities, and priorities.",
+    title: "Conversation",
+    body: "We learn what you need and what a good result looks like.",
   },
   {
     index: "02",
-    title: "Strategy",
-    body: "We develop a clear plan tailored to your goals, outlining recommended services, project scope, timelines, and pricing before work begins.",
+    title: "Build",
+    body: "We design and build the work, and you review it before it goes live.",
   },
   {
     index: "03",
-    title: "Design & Build",
-    body: "We bring your project to life, whether that's a new website, a marketing campaign, or a business automation solution. You'll have opportunities to review progress and provide feedback.",
-  },
-  {
-    index: "04",
     title: "Launch & Grow",
-    body: "Once everything is tested and approved, we launch. From there, we can monitor performance, make improvements, and provide ongoing support as your business evolves.",
+    body: "We launch when it's ready. Website care, updates, SEO, and improvements are available afterward if you want them.",
   },
 ] as const;
 
-export type FeaturedProject = {
+export type PortfolioProject = {
   id: string;
   name: string;
   description: string;
+  href?: string;
   image?: string;
   imageAlt?: string;
-  href?: string;
 };
 
-export const featuredProjects: FeaturedProject[] = [];
+/**
+ * Public portfolio. A project belongs here only after permission, completed work,
+ * and an authorized screenshot are all confirmed. Draft records live in
+ * portfolio-drafts.ts and are not imported by the site.
+ */
+export const publishedProjects: PortfolioProject[] = [];
 
-export const previewProjectPlaceholders: FeaturedProject[] = [
-  {
-    id: "placeholder-1",
-    name: "Internal placeholder",
-    description: "",
-  },
-  {
-    id: "placeholder-2",
-    name: "Internal placeholder",
-    description: "",
-  },
-  {
-    id: "placeholder-3",
-    name: "Internal placeholder",
-    description: "",
-  },
-];
-
-export const visibleProjects =
-  process.env.NODE_ENV === "development" ? previewProjectPlaceholders : featuredProjects;
-
-/** Published portfolio only. Stays false until featuredProjects has approved work. */
-export const showPortfolio = featuredProjects.length > 0;
+export const showPortfolio = publishedProjects.length > 0;

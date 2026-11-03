@@ -49,8 +49,8 @@ export function useHomeNavigation(onPlainActivate?: () => void) {
     if (!isPlainActivation(event)) return;
     const url = new URL(event.currentTarget.href);
     if (url.origin !== window.location.origin || url.pathname !== fullSiteHomePath) return;
-    onPlainActivate?.();
     if (pathname !== fullSiteHomePath) return;
+    onPlainActivate?.();
     if (url.hash && !document.getElementById(decodeURIComponent(url.hash.slice(1)))) return;
     event.preventDefault();
     window.setTimeout(() => scrollHomeTarget(url.hash), 0);

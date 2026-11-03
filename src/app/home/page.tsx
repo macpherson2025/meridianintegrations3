@@ -3,7 +3,7 @@ import { HomePage } from "@/components/site/HomePage";
 
 const title = "Meridian Integrations | Websites, Search, and Marketing";
 const description =
-  "We design high-performance websites, help businesses get found on Google and AI-powered search, and build marketing and automation solutions that generate leads and support growth.";
+  "Helping businesses get found, attract customers, and grow in an AI-driven world.";
 
 const organization = {
   "@context": "https://schema.org",

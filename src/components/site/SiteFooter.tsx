@@ -36,7 +36,7 @@ export function SiteFooter() {
                   className="inline-flex min-h-11 items-center text-sm text-zinc-300 transition-colors hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white sm:min-h-0 sm:py-1"
                   onClick={handleHomeClick}
                 >
-                  {service.cardTitle}
+                  {service.title}
                 </a>
               </li>
             ))}

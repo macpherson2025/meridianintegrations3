@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Logo } from "@/components/Logo";
 import {
+  conversationLabel,
   fullSiteHomePath,
   showPortfolio,
 } from "@/data/homepage";
@@ -11,10 +12,10 @@ import { useHomeNavigation } from "@/components/site/useHomeNavigation";
 
 const navItems = [
   { href: fullSiteHomePath, label: "Home" },
-  { href: `${fullSiteHomePath}#services`, label: "Services" },
-  { href: `${fullSiteHomePath}#why`, label: "Why Meridian" },
-  { href: `${fullSiteHomePath}#how-we-work`, label: "How We Work" },
   { href: `${fullSiteHomePath}#work`, label: "Work" },
+  { href: `${fullSiteHomePath}#services`, label: "What We Do" },
+  { href: `${fullSiteHomePath}#who-we-are`, label: "Who We Are" },
+  { href: `${fullSiteHomePath}#how-we-work`, label: "How We Work" },
 ].filter((item) => showPortfolio || item.href !== `${fullSiteHomePath}#work`);
 
 const navLinkClass =
@@ -48,7 +49,7 @@ export function SiteHeader() {
               {item.label}
             </a>
           ))}
-          <ConsultationLink className={ctaClass} />
+          <ConsultationLink className={ctaClass} label={conversationLabel} />
         </nav>
         <button
           type="button"
@@ -86,7 +87,11 @@ export function SiteHeader() {
               label="Contact"
               onNavigate={() => setOpen(false)}
             />
-            <ConsultationLink className={`${ctaClass} mt-2`} onNavigate={() => setOpen(false)} />
+            <ConsultationLink
+              className={`${ctaClass} mt-2`}
+              label={conversationLabel}
+              onNavigate={() => setOpen(false)}
+            />
           </nav>
         </div>
       ) : null}
