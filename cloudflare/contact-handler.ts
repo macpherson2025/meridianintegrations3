@@ -13,6 +13,7 @@ const resendUrl = "https://api.resend.com/emails";
 const defaultOrigins = [
   "https://meridianintegrations.com",
   "https://www.meridianintegrations.com",
+  "https://meridianintegrations3.pages.dev",
   "http://localhost:3000",
   "http://127.0.0.1:3000",
 ];
