@@ -13,6 +13,7 @@
   --color-brandCard: #141414;
   --color-brandRed: #dc2626;
   --color-brandRedHover: #b91c1c;
+  --color-brandRedInk: #f03028;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -128,7 +129,40 @@ body {
   }
 }
 
+.contact-panel {
+  animation: contact-slide-in 200ms ease-out;
+}
+
+.contact-backdrop {
+  animation: contact-fade-in 200ms ease-out;
+}
+
+@keyframes contact-slide-in {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes contact-fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .contact-panel,
+  .contact-backdrop {
+    animation: none;
+  }
+
   .assembly-draw {
     animation: none;
     stroke-dashoffset: 0;

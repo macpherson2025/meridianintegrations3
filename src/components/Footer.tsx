@@ -17,7 +17,7 @@ export function Footer() {
           </p>
         </div>
         <div>
-          <h2 className="text-xs font-semibold tracking-[0.22em] text-brandRed">
+          <h2 className="text-xs font-semibold tracking-[0.22em] text-brandRedInk">
             DENVER REGIONS
           </h2>
           <ul className="mt-4 space-y-2">
@@ -34,7 +34,7 @@ export function Footer() {
           </ul>
         </div>
         <div>
-          <h2 className="text-xs font-semibold tracking-[0.22em] text-brandRed">
+          <h2 className="text-xs font-semibold tracking-[0.22em] text-brandRedInk">
             SERVICE VERTICALS
           </h2>
           <ul className="mt-4 space-y-2">
@@ -51,7 +51,7 @@ export function Footer() {
           </ul>
         </div>
         <div>
-          <h2 className="text-xs font-semibold tracking-[0.22em] text-brandRed">
+          <h2 className="text-xs font-semibold tracking-[0.22em] text-brandRedInk">
             STUDIO
           </h2>
           <p className="mt-4 text-sm leading-6 text-zinc-300">

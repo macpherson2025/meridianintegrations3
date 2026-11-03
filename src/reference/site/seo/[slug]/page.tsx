@@ -46,7 +46,7 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
     <article>
       <header className="border-b border-white/10">
         <div className="mx-auto w-full max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
-          <p className="text-xs font-semibold tracking-[0.28em] text-brandRed">
+          <p className="text-xs font-semibold tracking-[0.28em] text-brandRedInk">
             TECHNICAL SEO BLUEPRINT
           </p>
           <h1 className="mt-4 max-w-3xl text-4xl font-bold tracking-tight text-white sm:text-5xl">
@@ -84,7 +84,7 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
           <ol className="mt-8 grid gap-4 lg:grid-cols-3">
             {industry.blueprint.map((step, index) => (
               <li key={step.title} className="border border-white/10 bg-brandCard p-6">
-                <p className="text-xs font-semibold tracking-[0.22em] text-brandRed">
+                <p className="text-xs font-semibold tracking-[0.22em] text-brandRedInk">
                   STEP 0{index + 1}
                 </p>
                 <h3 className="mt-3 text-lg font-bold text-white">{step.title}</h3>

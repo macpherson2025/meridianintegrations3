@@ -44,7 +44,7 @@ export function FullHomepage() {
           aria-hidden="true"
         />
         <div className="relative mx-auto w-full max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
-          <p className="text-xs font-semibold tracking-[0.28em] text-brandRed">
+          <p className="text-xs font-semibold tracking-[0.28em] text-brandRedInk">
             DENVER, COLORADO
           </p>
           <h1 className="mt-5 max-w-4xl text-4xl font-bold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-6xl">
@@ -90,7 +90,7 @@ export function FullHomepage() {
 
       <section id="services" className="scroll-mt-24 border-t border-white/10">
         <div className="mx-auto w-full max-w-6xl px-5 py-20 sm:px-8">
-          <p className="text-xs font-semibold tracking-[0.28em] text-brandRed">
+          <p className="text-xs font-semibold tracking-[0.28em] text-brandRedInk">
             SERVICES
           </p>
           <h2 className="mt-4 max-w-2xl text-3xl font-bold tracking-tight text-white sm:text-4xl">
@@ -103,7 +103,7 @@ export function FullHomepage() {
                 href={`/seo/${industry.slug}`}
                 className="group border border-white/10 bg-brandCard p-6 transition-colors hover:border-brandRed"
               >
-                <h3 className="text-xl font-bold text-white group-hover:text-brandRed">
+                <h3 className="text-xl font-bold text-white group-hover:text-brandRedInk">
                   {industry.name}
                 </h3>
                 <p className="mt-3 text-sm leading-6 text-zinc-300">{industry.summary}</p>
@@ -118,7 +118,7 @@ export function FullHomepage() {
 
       <section id="markets" className="scroll-mt-24 border-t border-white/10">
         <div className="mx-auto w-full max-w-6xl px-5 py-20 sm:px-8">
-          <p className="text-xs font-semibold tracking-[0.28em] text-brandRed">
+          <p className="text-xs font-semibold tracking-[0.28em] text-brandRedInk">
             MARKETS
           </p>
           <h2 className="mt-4 max-w-2xl text-3xl font-bold tracking-tight text-white sm:text-4xl">
@@ -131,7 +131,7 @@ export function FullHomepage() {
                 href={`/local-seo/${location.slug}`}
                 className="border border-white/10 bg-brandCard p-6 transition-colors hover:border-brandRed"
               >
-                <p className="text-xs font-semibold tracking-[0.18em] text-brandRed">
+                <p className="text-xs font-semibold tracking-[0.18em] text-brandRedInk">
                   {location.county.toUpperCase()}
                 </p>
                 <h3 className="mt-2 text-xl font-bold text-white">{location.cityName}</h3>
@@ -147,7 +147,7 @@ export function FullHomepage() {
       <section id="audit" className="scroll-mt-24 border-t border-white/10">
         <div className="mx-auto w-full max-w-6xl px-5 py-20 sm:px-8">
           <div className="border border-white/10 bg-brandCard px-6 py-10 sm:px-10">
-            <p className="text-xs font-semibold tracking-[0.28em] text-brandRed">
+            <p className="text-xs font-semibold tracking-[0.28em] text-brandRedInk">
               FREE VIDEO AUDIT
             </p>
             <h2 className="mt-4 max-w-2xl text-3xl font-bold tracking-tight text-white sm:text-4xl">

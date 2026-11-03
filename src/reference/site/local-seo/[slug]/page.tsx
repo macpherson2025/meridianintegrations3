@@ -48,7 +48,7 @@ export default async function LocalSeoPage({ params }: LocalSeoPageProps) {
     <article>
       <header className="border-b border-white/10">
         <div className="mx-auto w-full max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
-          <p className="text-xs font-semibold tracking-[0.28em] text-brandRed">
+          <p className="text-xs font-semibold tracking-[0.28em] text-brandRedInk">
             {location.county.toUpperCase()} · FRONT RANGE
           </p>
           <h1 className="mt-4 max-w-3xl text-4xl font-bold tracking-tight text-white sm:text-5xl">

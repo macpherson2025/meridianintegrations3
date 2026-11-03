@@ -1,14 +1,24 @@
+import type { MouseEventHandler } from "react";
 import Link from "next/link";
 
 type LogoProps = {
   className?: string;
+  href?: string;
+  label?: string;
+  onClick?: MouseEventHandler<HTMLAnchorElement>;
 };
 
-export function Logo({ className = "" }: LogoProps) {
+export function Logo({
+  className = "",
+  href = "/",
+  label = "Meridian Integrations home",
+  onClick,
+}: LogoProps) {
   return (
     <Link
-      href="/"
-      aria-label="Meridian Integrations home"
+      href={href}
+      aria-label={label}
+      onClick={onClick}
       className={`group inline-flex items-center gap-3 ${className}`}
     >
       <svg
@@ -28,7 +38,7 @@ export function Logo({ className = "" }: LogoProps) {
         <span className="text-[13px] font-bold tracking-[0.22em] text-white sm:text-sm">
           MERIDIAN
         </span>
-        <span className="mt-1 text-[9px] font-semibold tracking-[0.32em] text-brandRed sm:text-[10px]">
+        <span className="mt-1 text-[9px] font-semibold tracking-[0.32em] text-brandRedInk sm:text-[10px]">
           INTEGRATIONS
         </span>
       </span>
