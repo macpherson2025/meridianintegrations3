@@ -1,0 +1,7 @@
+# Legacy Meridian pages with relevant replacement content
+/contact/ /contact 301
+/website-solutions/ / 301
+/website-solutions / 301
+# Old homepage preview path (existing /home route may take precedence)
+/home / 301
+/home/ / 301
